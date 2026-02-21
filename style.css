@@ -18,18 +18,28 @@
 }
 .container{
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+.main-box{
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: row;
-
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
+
+
 span{
     display: flex;
+    flex-direction: row;
     font-size: 16px;
     color: #7E7E82;
     margin: 20px;
     font-family: 'TT Lakes regular', sans-serif;
 }
+
 
 .logo1{
     display: flex;
@@ -39,6 +49,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -64,6 +75,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -84,6 +96,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -104,6 +117,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -124,6 +138,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -144,6 +159,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -164,6 +180,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -184,6 +201,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -204,6 +222,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -216,6 +235,7 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
@@ -228,6 +248,8 @@ span{
     height: 72px;
     border: 1px solid lightgray;
     margin: 20px;
+    border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
+
