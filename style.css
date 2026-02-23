@@ -263,13 +263,21 @@ span{
 
 }
 
-button{
+.show-all {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: none;
-    width: 25px;
-    height: 25px;
+    align-items: center;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+.text{
+    margin: 5px;
+}
+.icon{
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+}
+
+.show-all.active .icon {
+    transform: rotate(180deg);
 }

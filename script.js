@@ -1,33 +1,11 @@
-/*let swiper;
+const toggleBtn = document.getElementById('toggleBtn');
+const text = toggleBtn.querySelector('.text');
+toggleBtn.addEventListener('click', function () {
+    toggleBtn.classList.toggle('active');
 
-function initSwiper() {
-    if (window.innerWidth < 768 && !swiper) {
-        swiper = new swiper('.brands', {
-            slidesPerView:1,
-            spaceBetween:16,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+    if(toggleBtn.classList.contains('active')) {
+        text.textContent = 'Скрыть' ;
+    } else {
+        text.textContent = 'Показать все' ;
     }
-    if (window.innerWidth >= 768 && swiper) {
-        swiper.destroy(true, true);
-        swiper = underfined;
-    }
-}
-
-document.addEventListener ('DOMContentLoaded', function () {
-    initSwiper();
-    window.addEventListener ('resize', initSwiper);
-})
-
-document.addEventListener('DOMContentLoaded', function(){
-    new Swiper( 'brands', {
-        slidesPerView: 1,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable:true,
-        }
-    })
-})*/
+});
