@@ -260,7 +260,16 @@ span{
     overflow-x: none;
     margin-top: 20px;
   }
-.logo7, .logo8, .logo9, .logo10, .logo11{
-    display: none;
+
 }
+
+button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 20px;
 }
