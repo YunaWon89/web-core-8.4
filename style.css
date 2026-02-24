@@ -40,7 +40,7 @@ span{
     color: #7E7E82;
     margin-left: 20px;
     margin-top: 30px;
-    font-family: 'TT Lakes regular', sans-serif;
+    font-family: 'TT Lakes Regular', sans-serif;
 }
 
 .brand-card{
@@ -51,7 +51,7 @@ span{
    /* height: 72px;*/
     border: 1px solid lightgray;
     margin: 10px;
-    padding: 0 16px;
+    /*padding: 0 16px;*/
     border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
@@ -69,9 +69,11 @@ display: flex;
     height: 30px;
     margin-left: 20px;
 }
-.tablet{
-    display: none;
+
+.swiper{
+    overflow: hidden;
 }
+
 .swiper-pagination {
     margin-top: 16px;
 }
@@ -109,12 +111,12 @@ display: flex;
     .swiper-wrapper{
     display: flex !important;
     flex-wrap: wrap;
+    gap: 20px;
+    transform: none !important;
     flex-direction: row;
     justify-content: flex-start;
 }
-.swiper-slide {
-    width: auto !important;
-}
+
 .swiper-pagination {
     display: none;
 }
@@ -128,4 +130,11 @@ display: flex;
    .swiper-slide:nth-child(n+9) {
     display: none;
    }
+      .swiper-wrapper{
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    transform: none !important;
+    flex-direction: row;
+    justify-content: flex-start;}
 }
