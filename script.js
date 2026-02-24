@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const toggleBtn = document.getElementById('toggleBtn');
 const text = toggleBtn.querySelector('.text');
@@ -16,12 +17,42 @@ window.addEventListener('resize', checkWidth);
 });
 
 
-/*toggleBtn.addEventListener('click', function () {
-    toggleBtn.classList.toggle('active');
+/*const swiper = new Swiper('.swiper', {
+    slidesPerView:auto,
+    spaceBetween:16,
 
-    if(toggleBtn.classList.contains('active')) {
-        text.textContent = '' ;
-    } else {
-        text.textContent = '' ;
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            enabled: false,
+        }
     }
 });*/
+
+let swiper;
+function initSwiper() {
+    if (window.innerWidth<768) {
+        if (!swiper) {
+            swiper = new swiper('.swiper', {
+                slidesPerView:'auto',
+                spaceBetween:16,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                }
+            });
+        }
+    } else {
+        if (swiper) {
+            swiper.destroy(true,true);
+            swiper = undefined;
+        }
+    }
+}
+window.addEventListener('load',
+    initSwiper);
+    window.addEventListener('resize',
+        initSwiper);
