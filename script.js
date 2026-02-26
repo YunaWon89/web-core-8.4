@@ -1,5 +1,35 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+const toggleBtn = document.getElementById('toggleBtn');
+const wrapper = document.querySelector('.swiper-wrapper'); // Контейнер с карточками
+const btnText = toggleBtn.querySelector('.text');
+
+toggleBtn.addEventListener('click', function() {
+    // Переключаем класс 'opened' у обертки
+    wrapper.classList.toggle('opened');
+   
+    // Добавляем класс 'active' самой кнопке (для поворота иконки)
+    toggleBtn.classList.toggle('active');
+
+    // Меняем текст в зависимости от состояния
+    if (wrapper.classList.contains('opened')) {
+        btnText.textContent = 'Скрыть';
+    } else {
+        btnText.textContent = 'Показать все';
+    }
+
+
+});
+
+
+
+
+
+
+
+
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
     const toggleBtn = document.getElementById('toggleBtn');
 const text = toggleBtn.querySelector('.text');
 function checkWidth() {
@@ -14,7 +44,7 @@ function checkWidth() {
 checkWidth();
 
 window.addEventListener('resize', checkWidth);
-});
+});*/
 
 
 /*const swiper = new Swiper('.swiper', {
