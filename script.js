@@ -1,5 +1,5 @@
 
-/*document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const toggleBtn = document.getElementById('toggleBtn');
 const text = toggleBtn.querySelector('.text');
 function checkWidth() {
@@ -14,7 +14,7 @@ function checkWidth() {
 checkWidth();
 
 window.addEventListener('resize', checkWidth);
-});*/
+});
 
 
 /*const swiper = new Swiper('.swiper', {
@@ -30,9 +30,9 @@ window.addEventListener('resize', checkWidth);
             enabled: false,
         }
     }
-});*/
+}); */
 
-let swiper = null;
+/*let swiper = null;
 function initSwiper() {
     if (window.innerWidth<768) {
         if (!swiper) {
@@ -77,4 +77,4 @@ toggleBtn.addEventListener('click', () => {
  });
  toggleBtn.querySelector('.text').textContent = 'Показать всё';
  }
-});     
+});   */  

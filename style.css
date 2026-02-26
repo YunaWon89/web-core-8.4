@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    height: 100px;
     
 }
 .swiper-slide{
@@ -30,7 +31,7 @@
     overflow-x: auto;
     margin-top: 20px;
     padding: 16px;
-   
+ 
 }
 
 span{
@@ -48,10 +49,10 @@ span{
     justify-content: space-between;
     align-items: center;
     width: 240px;
-   /* height: 72px;*/
+    height: 50px;
     border: 1px solid lightgray;
     margin: 10px;
-    /*padding: 0 16px;*/
+    padding: 0 16px;
     border-radius: 6px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
@@ -62,6 +63,14 @@ display: flex;
   max-height: 32px;
    margin: 10px;
     background-color: white;
+}
+
+.brand-icon2{
+    display: flex;
+  max-height: 32px;
+   margin: 10px;
+    background-color: white;
+    width: 140px;
 }
 .arrow{
     background-color: white;
@@ -104,7 +113,7 @@ display: flex;
 }
 }
 
-@media (min-width:768px) and (max-width:1119px) {
+@media (min-width:768px) and (max-width:1023px) {
     .brand-card{
         width: 224px;
     }
@@ -117,6 +126,13 @@ display: flex;
     justify-content: flex-start;
 }
 
+.swiper-slide {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 .swiper-pagination {
     display: none;
 }
@@ -126,15 +142,29 @@ display: flex;
 
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1024px) {
    .swiper-slide:nth-child(n+9) {
     display: none;
    }
-      .swiper-wrapper{
+
+.brand-card{
+width: 240px;
+}
+
+    .swiper-wrapper{
     display: flex !important;
     flex-wrap: wrap;
     gap: 20px;
     transform: none !important;
     flex-direction: row;
-    justify-content: flex-start;}
+    justify-content: flex-start;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 }
