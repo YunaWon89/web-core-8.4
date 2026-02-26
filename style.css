@@ -140,7 +140,7 @@ display: flex;
 }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:767px) {
     
     .swiper{
         overflow: visible;
@@ -154,6 +154,8 @@ display: flex;
     }
     
     .brand-card{
+        display: flex;
+        align-items: center;
         width: calc((100%-40px)/3);
         margin: 10 !important;
        
@@ -187,6 +189,8 @@ display: flex;
 
 
 @media (min-width: 1120px) {
+
+
    .brand-card:nth-child(n+7){
     display: flex;
    } 
