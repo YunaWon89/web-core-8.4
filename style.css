@@ -10,6 +10,7 @@
   font-style: normal;
 }
 
+
 .swiper{
     box-sizing: border-box;
     margin: 0;
@@ -110,9 +111,9 @@ display: flex;
     overflow: hidden;
 }
 
-.swiper-pagination {
+/*.swiper-pagination {
     margin-top: 16px;
-}
+}*/
 
 .show-all {
     display: flex;

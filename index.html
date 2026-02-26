@@ -91,7 +91,18 @@
     <span class="text">Показать все</span>
    </div>
    
- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+    });
+  </script>
    <script src="script.js"></script>
    
   
