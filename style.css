@@ -65,6 +65,33 @@ display: flex;
     background-color: white;
 }
 
+.tablet-hidden{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 50px;
+    border: 1px solid lightgray;
+    margin: 10px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+}
+
+.pc-hidden{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 50px;
+    border: 1px solid lightgray;
+    margin: 10px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+}
 .brand-icon2{
     display: flex;
   max-height: 32px;
@@ -140,6 +167,10 @@ display: flex;
     display: none;
 }
 
+.tablet-hidden{
+    display: none;
+}
+
 }
 
 @media (min-width: 1024px) {
@@ -165,6 +196,10 @@ width: 240px;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+}
+
+.pc-hidden{
+    display: none;
 }
 
 }
