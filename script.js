@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("toggleBtn");
   const text = toggleBtn.querySelector(".text");
@@ -24,6 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // toggleBtn.addEventListener("click", () => {
+  //   if (text.textContent === "Показать все") {
+  //     tabletSlides.forEach((el) => el.classList.remove("tablet-none"));
+  //     pcSlides.forEach((el) => el.classList.remove("pc-none"));
+  //   } else {
+  //     tabletSlides.forEach((el) => el.classList.add("tablet-none"));
+  //     pcSlides.forEach((el) => el.classList.add("pc-none"));
+  //   }
+  // })
+
+  // стартовое состояние: "Показать все" (то есть скрыто)
   let hidden = true;
   setHidden(hidden);
 
@@ -34,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleBtn.classList.remove("active");
     }
 
+    // на мобильных кнопка скрыта, поэтому сбрасываем -none,
+    // чтобы при возврате на десктоп всё отображалось корректно
     if (window.innerWidth < 768) {
       hidden = false;
       tabletSlides.forEach((el) => el.classList.remove("tablet-none"));
@@ -41,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
       text.textContent = "Показать все";
       toggleBtn.classList.remove("active");
     } else {
-
-         setHidden(hidden);
+      // при >=768 возвращаем состояние, которое выбрал пользователь
+      setHidden(hidden);
     }
   }
   checkWidth();
@@ -59,14 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let swiper = null;
   function initSwiper() {
     if (window.innerWidth < 768 && swiper === null) {
-      swiper = new Swiper(".swiper", {
-        
+      swiper = new Swiper(".mySwiper", {
         slidesPerView: 1.2,
         spaceBetween: 10,
-       pagination: {
+        pagination: {
           el: ".swiper-pagination",
           clickable: true,
-       }, 
+        },
       });
     }
 

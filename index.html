@@ -1,93 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Core 8-4</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-
-
-</head>
-<body>        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Core 8.4</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
     <span class="text">Ремонт техники различных брендов</span>
 
-    <div class="swiper">
-        
-    <div class="swiper-container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="brand-icon acer" src="img/acer.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="brand-icon apple" src="img/apple.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-            <div class="swiper-slide">
-<img class="brand-icon" src="img/lenovo.png" alt="lenovo">
-<img class="arrow" src="img/go.png" alt="">
-            </div>
+        <div class="swiper-slide">
+          <img class="brand-icon bosch" src="img/Bosch.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-            <div class="swiper-slide">
-                <img class="brand-icon" src="img/samsung.png" alt="samsung">
-                <img class="arrow" src="img/go.png" alt="">
-            </div>
+        <div class="swiper-slide">
+          <img class="brand-icon hp" src="img/HP.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-            <div class="swiper-slide">
-                <img class="brand-icon" src="img/apple.png" alt="apple">
-                <img class="arrow" src="img/go.png" alt="">
-            </div>
+        <div class="swiper-slide">
+          <img class="brand-icon lenovo" src="img/lenovo.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-            <div class="swiper-slide">
-                <img class="brand-icon" src="img/ViewSonic.png" alt="ViewSonic">
-                <img class="arrow" src="img/go.png" alt="">
-            </div>
+        <div class="swiper-slide">
+          <img class="brand-icon samsung" src="img/samsung.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-            <div class="swiper-slide">
-                <img class="brand-icon" src="img/Bosch.png" alt="bosch">
-                <img class="arrow" src="img/go.png" alt="">
-            </div>
+        <div class="swiper-slide tablet-none">
+          <img class="brand-icon sony" src="img/Sony.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-            <div class="swiper-slide">
-                <img class="brand-icon" src="img/HP.png" alt="hp">
-                <img class="arrow" src="img/go.png" alt="">
-            </div>
+        <div class="swiper-slide tablet-none">
+          <img class="brand-icon viewsonic" src="img/ViewSonic.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-<div class="swiper-slide tablet-none">
-    <img class="brand-icon" src="img/acer.png" alt="acer">
-    <img class="arrow" src="img/go.png" alt="">
-</div>
+        <div class="swiper-slide tablet-none pc-none">
+          <img class="brand-icon bosch" src="img/Bosch.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-<div class="swiper-slide tablet-none">
-    <img class="brand-icon" src="img/Sony.png" alt="sony">
-    <img class="arrow" src="img/go.png" alt="">
-</div>
+        <div class="swiper-slide tablet-none pc-none">
+          <img class="brand-icon hp" src="img/HP.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
+        <div class="swiper-slide tablet-none pc-none">
+          <img class="brand-icon lenovo" src="img/lenovo.png" alt="" />
+          <img src="img/go.png" alt="" />
+        </div>
 
-<div class="swiper-slide tablet-none pc-none">
-    <img class="brand-icon" src="img/lenovo.png" alt="lenovo">
-    <img class="arrow" src="img/go.png" alt="">
-</div>
+      </div>
 
+      <div class="swiper-pagination"></div>
 
-<div class="swiper-slide tablet-none pc-none">
-    <img class="brand-icon" src="img/samsung.png" alt="samsung">
-    <img class="arrow" src="img/go.png" alt="">
-</div>
+      
+    </div>
 
-<div class="swiper-slide tablet-none pc-none">
-    <img class="brand-icon" src="img/apple.png" alt="apple">
-    <img class="arrow" src="img/go.png" alt="">
-</div>
+    <div class="show-all" id="toggleBtn">
+      <img class="icon" src="img/expand.png" alt="" />
+      <span class="text">Показать все</span>
+    </div>
 
-</div>
-</div>
-<div class="swiper-pagination"></div>
-    
-</div>
-   <div class="show-all" id="toggleBtn">
-    <img class="icon" src="img/expand.png" alt="">
-    <span class="text">Показать все</span>
-   </div>
-   
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-   <script src="script.js"></script>
-   
-  
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
