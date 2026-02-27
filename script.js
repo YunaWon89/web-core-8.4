@@ -1,110 +1,79 @@
 
-const toggleBtn = document.getElementById('toggleBtn');
-const wrapper = document.querySelector('.swiper-wrapper'); // Контейнер с карточками
-const btnText = toggleBtn.querySelector('.text');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("toggleBtn");
+  const text = toggleBtn.querySelector(".text");
+  // берём элементы и с tablet, и с tablet-none, чтобы всё работало с текущей разметкой
+  const tabletSlides = document.querySelectorAll(
+    ".swiper-slide.tablet, .swiper-slide.tablet-none",
+  );
+  const pcSlides = document.querySelectorAll(
+    ".swiper-slide.pc, .swiper-slide.pc-none",
+  );
 
-toggleBtn.addEventListener('click', function() {
-    // Переключаем класс 'opened' у обертки
-    wrapper.classList.toggle('opened');
-   
-    // Добавляем класс 'active' самой кнопке (для поворота иконки)
-    toggleBtn.classList.toggle('active');
+  function setHidden(hidden) {
+    if (hidden) {
+      tabletSlides.forEach((el) => el.classList.add("tablet-none"));
+      pcSlides.forEach((el) => el.classList.add("pc-none"));
+      toggleBtn.classList.remove("active");
+      text.textContent = "Показать все";
+    } else {
+      tabletSlides.forEach((el) => el.classList.remove("tablet-none"));
+      pcSlides.forEach((el) => el.classList.remove("pc-none"));
+      toggleBtn.classList.add("active");
+      text.textContent = "Скрыть";
+    }
+  }
 
-    // Меняем текст в зависимости от состояния
-    if (wrapper.classList.contains('opened')) {
-        btnText.textContent = 'Скрыть';
-    } else {
-        btnText.textContent = 'Показать все';
-    }
+  let hidden = true;
+  setHidden(hidden);
 
+  function checkWidth() {
+    if (window.innerWidth >= 1120) {
+      toggleBtn.classList.add("active");
+    } else {
+      toggleBtn.classList.remove("active");
+    }
 
+    if (window.innerWidth < 768) {
+      hidden = false;
+      tabletSlides.forEach((el) => el.classList.remove("tablet-none"));
+      pcSlides.forEach((el) => el.classList.remove("pc-none"));
+      text.textContent = "Показать все";
+      toggleBtn.classList.remove("active");
+    } else {
+
+         setHidden(hidden);
+    }
+  }
+  checkWidth();
+
+  window.addEventListener("resize", checkWidth);
+
+  toggleBtn.addEventListener("click", () => {
+    hidden = !hidden;
+    setHidden(hidden);
+  });
 });
 
-
-
-
-
-
-
-
-
-
-/*document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.getElementById('toggleBtn');
-const text = toggleBtn.querySelector('.text');
-function checkWidth() {
-    if (window.innerWidth >= 1120) {
-        toggleBtn.classList.add('active');
-        text.textContent = 'Скрыть';
-    } else {
-        toggleBtn.classList.remove('active');
-        text.textContent = 'Показать все'
+document.addEventListener("DOMContentLoaded", function () {
+  let swiper = null;
+  function initSwiper() {
+    if (window.innerWidth < 768 && swiper === null) {
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     }
-}
-checkWidth();
 
-window.addEventListener('resize', checkWidth);
-});*/
-
-
-/*const swiper = new Swiper('.swiper', {
-    slidesPerView:auto,
-    spaceBetween:16,
-
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        768: {
-            enabled: false,
-        }
+    if (window.innerWidth >= 768 && swiper !== null) {
+      swiper.destroy(true, true);
+      swiper = null;
     }
-}); */
-
-/*let swiper = null;
-function initSwiper() {
-    if (window.innerWidth<768) {
-        if (!swiper) {
-            swiper = new Swiper('.swiper', {
-                slidesPerView:'auto',
-                spaceBetween:16,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                }
-            });
-        }
-    } else {
-        if (swiper) {
-            swiper.destroy(true,true);
-            swiper = undefined;
-        }
-    }
-}
-window.addEventListener('load',
-    initSwiper);
-    window.addEventListener('resize',
-        initSwiper);
-
-
-   const toggleBtn = document.getElementById('toggleBtn');
-const slides = document.querySelectorAll('.swiper-slide');
-let expanded = false;
-
-toggleBtn.addEventListener('click', () => {
- expanded = !expanded;
-
- if (expanded) {
- slides.forEach(slide => slide.style.display = 'block');
- toggleBtn.querySelector('.text').textContent = 'Скрыть';
- } else {
- slides.forEach((slide, index) => {
- if (window.innerWidth >= 1120) {
- slide.style.display = index < 8 ? 'block' : 'none';
- } else if (window.innerWidth >= 768) { slide.style.display = index < 6 ? 'block' : 'none';
- }
- });
- toggleBtn.querySelector('.text').textContent = 'Показать всё';
- }
-});   */  
+  }
+  initSwiper();
+  window.addEventListener("resize", initSwiper);
+});
