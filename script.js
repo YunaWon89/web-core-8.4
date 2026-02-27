@@ -59,13 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let swiper = null;
   function initSwiper() {
     if (window.innerWidth < 768 && swiper === null) {
-      swiper = new Swiper(".mySwiper", {
+      swiper = new Swiper(".swiper", {
+        
         slidesPerView: 1.2,
         spaceBetween: 10,
-        pagination: {
+       pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },
+       }, 
       });
     }
 
